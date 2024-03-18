@@ -38,23 +38,37 @@
 //JSX - is not HTML in JS
 //JSX - is look like HTML or XML syntax
 
+// const Title = () => (
+//   <h1 className="head" tabIndex="5">
+//     Namaste React using JSX 🚀
+//   </h1>
+// );
+
+// //React Functional Components or components Compositions
+// const HeadingComponent = () => (
+//   <div id="container">
+//     <Title/>
+//     <h1>Namaste React Functional Components</h1>
+//   </div>
+// );
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<HeadingComponent />);
+
+
+
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./components/Header";
+import Body from "./components/Body";
 
-const Title = () => (
-  <h1 className="head" tabIndex="5">
-    Namaste React using JSX 🚀
-  </h1>
-);
+const APPlayout = () => {
+  return (
+    <div className="App">
+      <Header/>
+      <Body/>
+    </div>
+  );
+};
 
-//React Functional Components or components Compositions 
-const HeadingComponent = () => (
-  <div id="container">
-    <Title/>
-    <h1>Namaste React Functional Components</h1>
-  </div>
-);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent />);
-
-
+root.render(<APPlayout/>);
